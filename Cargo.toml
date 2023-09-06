@@ -17,6 +17,7 @@ edition = "2021"
 license = "BSD-3-Clause"
 repository = "https://github.com/DA0-DA0/dao-contracts"
 version = "2.2.0"
+resolver = "2"
 
 [profile.release]
 codegen-units = 1
