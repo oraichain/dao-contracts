@@ -5,7 +5,7 @@ use cw20_base::msg::InstantiateMarketingInfo;
 use cw_utils::Duration;
 
 use dao_dao_macros::{active_query, token_query, voting_module_query};
-use dao_voting::threshold::{ActiveThreshold, ActiveThresholdResponse};
+use dao_voting::threshold::ActiveThreshold;
 
 /// Information about the staking contract to be used with this voting
 /// module.
@@ -80,7 +80,7 @@ pub enum QueryMsg {
     /// is wrapping.
     #[returns(cosmwasm_std::Addr)]
     StakingContract {},
-    #[returns(ActiveThresholdResponse)]
+    #[returns(dao_voting::threshold::ActiveThresholdResponse)]
     ActiveThreshold {},
 }
 

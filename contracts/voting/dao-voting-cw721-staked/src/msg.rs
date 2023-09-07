@@ -4,7 +4,7 @@ use cw721::Cw721ReceiveMsg;
 use cw_utils::Duration;
 use dao_dao_macros::{active_query, voting_module_query};
 use dao_interface::state::Admin;
-use dao_voting::threshold::{ActiveThreshold, ActiveThresholdResponse};
+use dao_voting::threshold::ActiveThreshold;
 
 #[cw_serde]
 #[allow(clippy::large_enum_variant)]
@@ -89,7 +89,7 @@ pub enum QueryMsg {
         start_after: Option<String>,
         limit: Option<u32>,
     },
-    #[returns(ActiveThresholdResponse)]
+    #[returns(dao_voting::threshold::ActiveThresholdResponse)]
     ActiveThreshold {},
 }
 

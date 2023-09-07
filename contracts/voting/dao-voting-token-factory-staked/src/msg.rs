@@ -3,7 +3,7 @@ use cosmwasm_std::Uint128;
 use cw_tokenfactory_issuer::msg::DenomUnit;
 use cw_utils::Duration;
 use dao_dao_macros::{active_query, token_query, voting_module_query};
-use dao_voting::threshold::{ActiveThreshold, ActiveThresholdResponse};
+use dao_voting::threshold::ActiveThreshold;
 
 #[cw_serde]
 pub struct InitialBalance {
@@ -107,7 +107,7 @@ pub enum QueryMsg {
         start_after: Option<String>,
         limit: Option<u32>,
     },
-    #[returns(ActiveThresholdResponse)]
+    #[returns(dao_voting::threshold::ActiveThresholdResponse)]
     ActiveThreshold {},
     #[returns(GetHooksResponse)]
     GetHooks {},
