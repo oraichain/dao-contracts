@@ -8,8 +8,8 @@ members = [
 	"packages/*",
 	"test-contracts/*",
 	"ci/*",
-	"contracts/external/*"
-	]
+	"contracts/external/*",
+]
 exclude = ["ci/configs/"]
 
 [workspace.package]
@@ -36,7 +36,7 @@ incremental = false
 overflow-checks = true
 
 [workspace.dependencies]
-anyhow = { version = "1.0.51"}
+anyhow = { version = "1.0.51" }
 cosmwasm-schema = { version = "1.1" }
 cosmwasm-std = { version = "1.1", features = ["ibc3"] }
 cosmwasm-storage = { version = "1.1" }
@@ -55,7 +55,7 @@ cw721-base = "0.16"
 proc-macro2 = "1.0"
 quote = "1.0"
 rand = "0.8"
-serde = { version = "1.0", default-features = false, features = ["derive"]}
+serde = { version = "1.0", default-features = false, features = ["derive"] }
 syn = { version = "1.0", features = ["derive"] }
 thiserror = { version = "1.0.30" }
 wynd-utils = "0.4.1"
@@ -99,7 +99,7 @@ dao-voting-native-staked = { path = "./contracts/voting/dao-voting-native-staked
 # v1 dependencies. used for state migrations.
 cw-core-v1 = { package = "cw-core", version = "0.1.0" }
 cw-proposal-single-v1 = { package = "cw-proposal-single", version = "0.1.0" }
-cw-utils-v1 = {package = "cw-utils", version = "0.13"}
+cw-utils-v1 = { package = "cw-utils", version = "0.13" }
 cw20-stake-external-rewards-v1 = { package = "stake-cw20-external-rewards", version = "0.2.6" }
 cw20-stake-reward-distributor-v1 = { package = "stake-cw20-reward-distributor", version = "0.1.0" }
 cw20-stake-v1 = { package = "cw20-stake", version = "0.2.6" }
